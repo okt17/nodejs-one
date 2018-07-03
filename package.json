@@ -2,7 +2,7 @@
   "name": "nodejs-one",
   "version": "1.0.0",
   "description": "",
-  "main": "server.js",
+  "main": "app.js",
   "scripts": {
     "start": "nodemon --ignore 'frontend/'",
     "build-frontend": "cd frontend && npm run build && cd .."
@@ -12,6 +12,11 @@
   "dependencies": {
     "express": "^4.16.3",
     "express-graphql": "^0.6.12",
-    "graphql": "^0.13.2"
+    "graphql": "^0.13.2",
+    "morgan": "^1.9.0",
+    "pug": "^2.0.3"
+  },
+  "devDependencies": {
+    "nodemon": "^1.17.5"
   }
 }
