@@ -1,8 +1,13 @@
-const CLIENT_SETTINGS = {
+const merge = require('deepmerge');
+const { requireIfExists } = require('./utils');
+const localSettings = requireIfExists('./localSettings');
+
+const CLIENT = {
   TITLE: 'Express',
-  SOME_SETTING: 'SOME_VALUE',
 };
 
-module.exports = {
-  CLIENT: CLIENT_SETTINGS,
+const settings = {
+  CLIENT,
 };
+
+module.exports = merge(settings, localSettings);
